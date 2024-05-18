@@ -1,0 +1,186 @@
+Collection framework in java is superset of the "collection interface" in java along with the "map" and the "iterator" interface in java, present 
+in the java.util library/ package.
+
+====<< Collection interface includes following children interfaces according to their properties as mentioned below:-
+
+list = ds for want to use values in a continous fashion.
+set = ds for if you want only the unique values.
+queue = ds for setting the priority.
+
+===<< Above are the interfaces in the collection framework having the classes which can be used by the used as mentioned below.
+
+===<< list(ArrayList, LinkedList, Stack, Vector[vecotrs are not majorly used in the today's world])
+
+1) ArrayList
+
+ArrayList internally uses the arrays from which it can dynamically increase and decrease it's size 
+
+Syntax:
+ArrayList</^it's data type ^/> ^name^ = new ArrayList<>();
+        or
+List</^it's data type ^/> ^name^ = new ArrayList<>();
+
+here,
+an empty array is made in the memory and when an element is added here then the array is made in the backgroud of size 10.
+When a new element is added after filling the 10 elements then it increases it's size by following convention by creating a
+new one and copying the elements from previous array to the new one:-
+size = n
+       n + n/2 +1
+
+functions: 
+* .add : add element in the end of the list or in the index if the index is provided.
+* .addAll : add one main list on top of the the parentesized list.
+* .get : to get any one value from the arraylist at a paticular index value.
+* .remove : to remove the elements from the arraylist at a paticular index value or element.
+* .clear : to remove all the elements from the string.
+* .set : to change a paticular value at a paticular index.
+* .contains : to check if an arraylist contains a certain value/ string.
+* .size : tells us the number of elements present in the arraylist.
+
+2) Stack
+
+In the stack the list is added by push(adding element) and pop(removing element) by using a list.
+
+Syntax:
+Stack</^it's data type^/> ^name^ =new Stack<>();
+
+functions: 
+* .push() : add element on top of a stack.
+* .peek() : return the element that is at the top of the stack.
+* .pop() : to remove the element from the stack.
+
+3) LinkedList
+
+Syntax:
+List</^list data type^/> ^name of the linkedlist^ = new LinkedList<>();
+
+funcitons: 
+same as the arraylist like add, remove, get, addAll, clear, set, contains and size.
+
+4) iterator
+
+Have the functionalities so that we can iterate the list through it.
+Iterator<Integer> nameoftheiterator = list.iterator(); 
+
+functions:
+* .hasNext(): tells whether it have value in the next iterator.
+* .next(): goes and return the next value in the list
+
+===<< Queue
+
+functions: 
+
+* .offer() : inserting the elements in the queue.
+* .poll() : removing and returing the element from the queue or null if queue empty.
+* .peek() : it shows us the next element which will be removed next from from the queue or which element is at the front of the queue.
+
+less commonly used expressions due to their capability of throwing exception and not just false like the offer and the poll expressions.
+* .add() : insert element in queue but throws exception if task unsuccessfull.
+* .element() : used to check the head of the queue and if queue empty throws error.
+* .remove() : removes the head of the queue and throw exception if queue empty.
+
+
+1) PriortiyQueue
+
+In this we want to implement the queue but also want to set the priority at the same time. Used for making the min/ max heap. 
+By standard min heap is implemented.
+
+Inserts the elements in the sorted manner.
+
+Syntax: 
+Queue<Integer> pq = new PriortiyQueue<>();
+
+We can add a comparator in the priority queue so that we can change the priority for the bigger number to go first.
+Here the min heap turns into the max heap.
+
+Syntax: 
+Queue<Integer> pq = new PriortiyQueue<>(Comparator.reverseOrder());
+
+2) LinkedList
+
+FIFO followed.
+LinkedList is the one which is implementing the queue.
+
+SYNTAX:
+Queue</^data_type^/> ^name^ = new LinkedList<>();
+
+3) Array deque
+
+This type of ds is used in the sliding window type questions where the requirement is to add and remove the contenet from bothe the directions.
+
+SYNTAX:
+ArrayDeque</^data type^/> ^name^ = new Arraydeque<>();
+
+exclusive functions:
+
+* .offerfirst() : It adds the values where the head is present.
+* .offerLast(): adds the elements at the last.
+
+
+===<< Set 
+
+No duplicate elements are allowed in hte set..
+
+1)HashSet[O(1)]
+
+Here hasing is used to store the element. Each element is given it's own hash which is the reason no two same elements can be stored here since they have
+unique hash value created by a hash funciton.
+
+Syntax:
+Set</^data_type^/> ^nameofthehashset^ = new HashSet<>();
+
+functions: 
+add(), remove(), contains(), clear(), isEmpty(), size()
+
+2) LinkedHashSet
+
+Same as the HashSet but the order of the values entered remains same.
+
+3) TreeSet[O[log(n)]]
+
+Same but here you get the sorted as well as uniques elements as a result.
+as it implements a BST in the backgroud.
+
+===< Map (Python ki dictionary)
+
+Stores the key value.
+
+eg:- 
+Keys:    Values:
+us------>United States
+br------>Brazil 
+es------>Spain
+
+1) HashMap[O(1)]
+
+Syntax: 
+Map< dtype1, dtyep2> nameofthemap = new HashMap<>();
+
+functions:
+* .put() : inserting values in the map.
+* .containsKey() : return true if the key is present.
+* .putIfAbsent() : same as the name suggests.
+* .entrySet() : retruns the set for the entry in the map.
+* .getKey() : return the key of the given value.
+* .getValue() : return the value stored for the given key.
+* .keySet() : gives all the keys only.
+* .values() : gives all the values only.
+* .containsValue() : true if the value present.
+* .remove() : to remove a value.
+
+2) TreeMap[O(log(n))]
+
+return the map in the sorted order of keys.
+
+========<< Arrays class
+ 
+Arrays.sort()
+Arrays.binarySearch(numbers, 4)
+Arrays.fill(array_name, value)
+
+
+==========<< Collection class
+
+* .min()
+* .min()
+* .frequency(ds, value)
